@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookListComponent } from './book-list/book-list.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LoginComponent } from './login/login.component';
 import { NewbookComponent } from './newbook/newbook.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 

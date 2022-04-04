@@ -18,7 +18,7 @@ export class BookService {
   }
 
   addBook(newbook: Book): void {
-    let id = this.books.length+1;
+    let id = Math.floor((Math.random() * 100000) + 1);
     newbook.id = id;
     this.books.push(newbook);
     console.log(this.books);
