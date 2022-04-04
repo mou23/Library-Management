@@ -1,0 +1,45 @@
+<!-- <ul>
+  <li *ngFor="let book of books">
+  </li>
+</ul> -->
+<div class="container">
+  <div class="mt-2 container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="addNewbook()">add new book</button></span>
+      </div>
+      <div class="col-md-7">
+        <div class="input-group">
+          <input type="text" class="form-control rounded mr-1" placeholder="Search" aria-label="Search" aria-describedby="search-addon" [(ngModel)]="searchString"/>
+          <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="searchBook()">search</button></span>
+          <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="clearSearch()">clear</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-2 container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Year</th>
+          <th scope="col">Status</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books; let i = index">
+          <td>{{book.name}}</td>
+          <td>{{book.year}}</td>
+          <td *ngIf="!book.available">borrowed</td>
+          <td *ngIf="book.available">available</td>
+          <td>
+            <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="updateBook(book, i)">update</button></span>
+            <span class="input-group-btn rounded"><button type="button" class="btn btn-outline-primary mr-1" (click)="deleteBook(book)">delete</button></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
