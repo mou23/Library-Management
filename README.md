@@ -1,6 +1,6 @@
 # LibraryManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+A simple library management system that performs CRUD operations. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
 
